@@ -4,3 +4,25 @@ A starter project, work-in-progress, for reading data off Solace PubSub+ event b
 
 Right now only supports subscribing Directly to topics, can't be used yet for Guaranteed messaging.
 
+## Building
+
+```
+./gradlew clean gem
+```
+
+Then use the `logstash-plugin` utility in your Logstash distribution to import the generated gem file.
+
+## Example config:
+
+```
+input {
+  solace {
+    host => "192.168.42.35"
+    vpn => "stats"
+    username => "statspump"
+    password => "password"
+    topics => [ "#STATS/>", "solace/*" ]
+  }
+}
+```
+
