@@ -25,7 +25,7 @@ input {
     vpn => "stats"
     username => "statspump"
     password => "password"
-    topics => [ "#STATS/>", "solace/*" ]
+    topic-subs => [ "#STATS/>", "solace/*" ]
   }
 }
 ```
@@ -38,7 +38,7 @@ input {
 - `vpn`: (optional, will default to "default") name of the Message VPN to connect to
 - `username`: (optional, will default to "default") client-username to connect with
 - `password`: (optional, will default to "default") password for the client-username
-- `topics`: (optional, will default to [">"]) array of strings of Direct subscriptions
+- `topic-subs`: (optional, will default to [">"]) array of strings of Direct subscriptions
 - `queue`: (**not implemented yet**) (optional, will default to not consfigured) name of the Solace queue to connect to to read messages from; if specified, will ignore `topics` subscriptionn configuration above
 
 

@@ -42,7 +42,7 @@ public class Solace implements Input {
     public static final PluginConfigSpec<String> USERNAME_CONFIG = PluginConfigSpec.stringSetting("username", "default");
     public static final PluginConfigSpec<Password> PASSWORD_CONFIG = PluginConfigSpec.passwordSetting("password", "default", false, false);
 
-    public static final PluginConfigSpec<List<Object>> TOPICS_CONFIG = PluginConfigSpec.arraySetting("topics", Collections.singletonList(">"), false, false);
+    public static final PluginConfigSpec<List<Object>> TOPICS_CONFIG = PluginConfigSpec.arraySetting("topic-subs", Collections.singletonList(">"), false, false);
     public static final PluginConfigSpec<String> QUEUE_CONFIG = PluginConfigSpec.stringSetting("queue");
 
     public static final List<PluginConfigSpec<?>> CONFIG_OPTIONS = new ArrayList<>();
