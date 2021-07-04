@@ -14,7 +14,10 @@ Right now only supports subscribing Directly to topics, can't be used yet for Gu
 ./gradlew clean gem
 ```
 
-Then use the `logstash-plugin` utility in your Logstash distribution to import the generated gem file.
+Then use the `logstash-plugin` utility in your Logstash distribution to import the generated gem file. Something like:
+```
+bin/logstash-plugin install --no-verify --local /home/alee/logstash-input-solace-0.0.1.gem
+```
 
 ## Example config:
 
