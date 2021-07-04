@@ -59,7 +59,7 @@ The following @metadata fields will be populated by the plugin. More to come!
 - `solace-correlation-id`: (optional) if the message's Correlation ID is configured
 - `solace-sequence-number`: (optional) if the message's Long sequence number is set
 
-In addition, `@timestamp` the Logstash event's timestamp will be updated with `msg.getSenderTimestamp()` if populated
+In addition, `@timestamp` the Logstash event's timestamp will be updated with `msg.getSenderTimestamp()` if populated.
 
 The payload of the received Solace message will be stored in the Logstash event field `payload`.
 
