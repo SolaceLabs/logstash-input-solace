@@ -46,7 +46,7 @@ input {
 
 ### Logstash Event Metadata
 
-The following @metadata fields will be populated by the plugin:
+The following @metadata fields will be populated by the plugin. More to come!
 
 - `solace-topic`: the Destination the message was published to
 - `solace-delivery-mode`: the message's DeliveryMode, either "DIRECT" or "PERSISTENT"
@@ -55,7 +55,8 @@ The following @metadata fields will be populated by the plugin:
 - `solace-reply-to`: (optional) if the message's reply-to is configured
 - `solace-correlation-id`: (optional) if the message's Correlation ID is configured
 - `solace-sequence-number`: (optional) if the message's Long sequence number is set
-- `@timestamp`: the Logstash event's timestamp will be updated with `msg.getSenderTimestamp()` if populated
 
+In addition, `@timestamp` the Logstash event's timestamp will be updated with `msg.getSenderTimestamp()` if populated
 
+The payload of the received Solace message will be stored in the Logstash event field `payload`.
 
