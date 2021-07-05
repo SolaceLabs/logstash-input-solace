@@ -1,4 +1,4 @@
-# Logstash Input Plugin to Solace
+# Logstash Input Plugin for Solace
 
 A plugin for reading any data off a Solace PubSub+ event broker and injecting into Logstash.  Logstash can then be configured to push the data into Elaxtic or any other number of destination, including many monitoring databases and other message broker technologies.
 
@@ -41,8 +41,8 @@ input {
 - `vpn`: (optional, will default to "default") name of the Message VPN to connect to
 - `username`: (optional, will default to "default") client-username to connect with
 - `password`: (optional, will default to "default") password for the client-username
-- `topic-subs`: (optional, will default to [">"]) array of strings of Direct subscriptions
-- `queue`: (**not implemented yet**) (optional, will default to not consfigured) name of the Solace queue to connect to to read messages from; if specified, will ignore `topics` subscriptionn configuration above
+- `topic-subs`: (optional, will default to [">"]) array of strings of Direct topic subscriptions to subscribe to
+- `queue`: (**not implemented yet**) (optional, will default to not consfigured) name of the Solace queue to connect to to read messages from; if specified, will ignore `topic-subs` subscriptionn configuration above
 
 
 
