@@ -158,7 +158,7 @@ public class Solace implements Input {
         } finally {
             stopped = true;
             try {
-                Thread.sleep(500);  // wait for ACKs to get propagated, if applicable
+                Thread.sleep(500);  // wait for consumer ACKs to get propagated to broker, if applicable
             } catch (InterruptedException e) {
             }
             session.closeSession();
