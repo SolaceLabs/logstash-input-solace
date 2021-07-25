@@ -1,4 +1,4 @@
-### N.B. Work in progress... not production quality yet
+#### N.B. Work in progress... not production quality yet
 
 # Logstash Input Plugin for Solace
 
