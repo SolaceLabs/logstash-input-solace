@@ -10,7 +10,7 @@ Right now only supports subscribing Directly to topics, can't be used yet for Gu
 
 ## Building
 
-You have to do a few steps before you can just build this.  Namely, you need to have a local copy of Logstash downloaded and built, so that this project can reference a compiled JAR file from it.  It follows the steps outlined in the links above. 👆
+You have to do a few steps before you can just build this.  Namely, you need to have a local copy of Logstash downloaded and built, so that this project can reference a compiled JAR file from it.  It follows the steps outlined in the Java input plugin example links above. 👆
 
 1. Download a copy of Logstash source.  I cloned the 7.10 branch.  You can get other versions if you want.  https://github.com/elastic/logstash/tree/7.10
 2. Set the environment variable `LS_HOME` to the directory where you saved Logstash.  E.g. ``export LS_HOME=`pwd` ``
