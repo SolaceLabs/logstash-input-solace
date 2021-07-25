@@ -13,7 +13,7 @@ Right now only supports subscribing Directly to topics, can't be used yet for Gu
 You have to do a few steps before you can just build this.  Namely, you need to have a local copy of Logstash downloaded and built, so that this project can reference a compiled JAR file from it.  It follows the steps outlined in the links above. 👆
 
 1. Download a copy of Logstash source.  I cloned the 7.10 branch.  You can get other versions if you want.  https://github.com/elastic/logstash/tree/7.10
-2. Set the environment variable `LS_HOME` to the directory where you saved Logstash.  E.g. `export LS_HOME=``pwd```
+2. Set the environment variable `LS_HOME` to the directory where you saved Logstash.  E.g. `export LS_HOME=\`pwd\``
 3. Build Logstash.  E.g. `./gradlew assemble` from the Logstash directory.  (or `gradlew.bat` if Windows Command Prompt)
 4. In the folder for _this_ project, create a new file `gradle.properties` with a single variable pointing to Logstash's built "core" directory.  E.g. mine looks like `LOGSTASH_CORE_PATH=../logstash-7.10/logstash-core`  as I have Logstash and this plugin in sibling directories.
 5. You are now ready to compile this project. From the input plugin home directory:
