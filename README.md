@@ -2,7 +2,7 @@
 
 # Logstash Input Plugin for Solace
 
-A plugin for reading any data off a Solace PubSub+ event broker and injecting into Logstash.  Logstash can then be configured to push the data into Elaxtic or any other number of destination, including many monitoring databases and other message broker technologies.
+A plugin for reading any data or events as messages off a Solace PubSub+ event broker and injecting into Logstash.  Logstash can then be configured to push the data into Elaxtic or any other number of destination, including many monitoring databases and other message broker technologies (i.e. Logstash can be a bridge).
 
 This is a starter project, work-in-progress.  It is based on https://github.com/logstash-plugins/logstash-input-java_input_example and https://www.elastic.co/guide/en/logstash/current/java-input-plugin.html.
 
@@ -71,5 +71,11 @@ The following @metadata fields will be populated by the plugin. More to come!
 
 In addition, `@timestamp` the Logstash event's timestamp will be updated with `msg.getSenderTimestamp()` if populated.
 
-The payload of the received Solace message will be stored in the Logstash event field `payload`.
+The payload of the received Solace message will be stored in the Logstash event field `payload`.  I'll make this configurable later.
+
+
+## Logstash API API
+
+Useful reference for coding.
+https://github.com/elastic/logstash/tree/master/logstash-core/src/main/java/co/elastic/logstash/api
 
