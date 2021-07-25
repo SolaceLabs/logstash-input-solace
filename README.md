@@ -1,3 +1,5 @@
+### N.B. Work in progress... not production quality yet
+
 # Logstash Input Plugin for Solace
 
 A plugin for reading any data off a Solace PubSub+ event broker and injecting into Logstash.  Logstash can then be configured to push the data into Elaxtic or any other number of destination, including many monitoring databases and other message broker technologies.
@@ -15,7 +17,7 @@ You have to do a few steps before you can just build this.  Namely, you need to 
 1. Download a copy of Logstash source.  I cloned the 7.10 branch.  You can get other versions if you want.  https://github.com/elastic/logstash/tree/7.10
 2. Set the environment variable `LS_HOME` to the directory where you saved Logstash.  E.g. ``export LS_HOME=`pwd` ``
 3. Build Logstash.  E.g. `./gradlew assemble` from the Logstash directory.  (or `gradlew.bat` if Windows Command Prompt)
-4. In the folder for _this_ project, create a new file `gradle.properties` with a single variable pointing to Logstash's built "core" directory.  E.g. mine looks like `LOGSTASH_CORE_PATH=../logstash-7.10/logstash-core`  as I have Logstash and this plugin in sibling directories.
+4. In the folder for _this_ project, create a new file `gradle.properties` with a single variable pointing to Logstash's built "core" directory.  E.g. mine looks like `LOGSTASH_CORE_PATH=../logstash-7.10/logstash-core`  as I have Logstash and this plugin in sibling directories.  You could also use an absolute path.
 5. You are now ready to compile this project. From the input plugin home directory:
 
 ```
