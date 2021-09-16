@@ -50,8 +50,8 @@ input {
 - `vpn`: (optional, will default to "default") name of the Message VPN to connect to
 - `username`: (optional, will default to "default") client-username to connect with
 - `password`: (optional, will default to "default") password for the client-username
-- `topic-subs`: (optional, will default to [] nothing) array of strings of either a) Direct topic subscriptions to subscribe to; or b) topic subscription to add to the queue, if configured (see below) (this requires either queue ownership, or at least "modify topics" permission on queue)
-- `queue`: (optional, will default to not consfigured) name of the Solace queue to connect to to read messages from; if `topic-subs` is specified, it will try to add each of these subscriptions to the queue
+- `topic-subs`: (optional, will default to [] nothing) array of strings of either a) Direct topic subscriptions to subscribe to; or b) topic subscription to add to the queue, if configured (see below) (this requires either queue ownership, or at least "modify-topics" permission on queue)
+- `queue`: (optional, will default to not consfigured) name of the Solace queue to connect to to read messages from; if `topic-subs` is specified, it will try to add each of these subscriptions to the queue; currently, if the queue doesn't exist, the plugin will throw an error, rather than trying to provision the queue
 
 
 
@@ -67,6 +67,8 @@ The following @metadata fields will be populated by the plugin. More to come!
 - `solace-reply-to`: (optional) if the message's reply-to is configured
 - `solace-correlation-id`: (optional) if the message's Correlation ID is configured
 - `solace-sequence-number`: (optional) if the message's Long sequence number is set
+- `solace-expiration`: (optional) if the message's Long expiration > 0
+- `solace-class-of-service`: a USER COS value of 1, 2, or 3; default value for published messages is 1
 
 In addition, `@timestamp` the Logstash event's timestamp will be updated with `msg.getSenderTimestamp()` if populated.
 
