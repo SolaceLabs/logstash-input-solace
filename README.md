@@ -8,7 +8,6 @@ This is a starter project, work-in-progress.  It is based on https://github.com/
 
 This is a JCSMP Java API alternative to https://www.elastic.co/guide/en/logstash/current/plugins-inputs-jms.html.  
 
-Right now only supports subscribing Directly to topics, can't be used yet for Guaranteed messaging.
 
 ## Building
 
