@@ -24,7 +24,7 @@ You have to do a few steps before you can just build this.  Namely, you need to 
 ./gradlew clean gem
 ```
 
-This will generate a file that looks something like `logstash-input-solace-x.y.z.gem`.  Use the `logstash-plugin` utility in your Logstash distribution to import the generated gem file. Something like:
+This will generate a file that looks something like `logstash-input-solace-x.y.z.gem`.  Use the `logstash-plugin` utility in your Logstash distribution (e.g. `/usr/share/logstash/`) to import the generated gem file. Something like:
 ```
 bin/logstash-plugin install --no-verify --local /home/alee/logstash-input-solace-0.0.1.gem
 ```
@@ -51,8 +51,8 @@ input {
 - `vpn`: (optional, will default to "default") name of the Message VPN to connect to
 - `username`: (optional, will default to "default") client-username to connect with
 - `password`: (optional, will default to "default") password for the client-username
-- `topic-subs`: (optional, will default to [">"]) array of strings of Direct topic subscriptions to subscribe to
-- `queue`: (**not implemented yet**) (optional, will default to not consfigured) name of the Solace queue to connect to to read messages from; if specified, will ignore `topic-subs` subscriptionn configuration above
+- `topic-subs`: (optional, will default to [] nothing) array of strings of either a) Direct topic subscriptions to subscribe to; or b) topic subscription to add to the queue, if configured (see below) (this requires either queue ownership, or at least "modify topics" permission on queue)
+- `queue`: (optional, will default to not consfigured) name of the Solace queue to connect to to read messages from; if `topic-subs` is specified, it will try to add each of these subscriptions to the queue
 
 
 
