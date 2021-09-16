@@ -1,4 +1,4 @@
-package com.solace.aaron.logstash.input;
+package com.solace.aa.logstash.input;
 
 import co.elastic.logstash.api.Configuration;
 import co.elastic.logstash.api.Context;
