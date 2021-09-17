@@ -8,7 +8,7 @@ apply from: LOGSTASH_CORE_PATH + "/../rubyUtils.gradle"
 // ===========================================================================
 // plugin info
 // ===========================================================================
-group                      'com.solace.aaron.logstash.input' // must match the package of the main plugin class
+group                      'com.solace.aa.logstash.input' // must match the package of the main plugin class
 version                    "${file("VERSION").text.trim()}" // read from required VERSION file
 description                = "Solace input plugin for Logstash"
 pluginInfo.licenses        = ['Apache-2.0'] // list of SPDX license IDs
